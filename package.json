@@ -13,7 +13,6 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "verify": "yarn typecheck && yarn test && yarn build"
-
   },
   "keywords": [],
   "author": "",
