@@ -7,20 +7,21 @@
     "node": "24.x"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "node api.js && tsx watch src/server.ts",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test test/app.test.ts",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node api.js && node dist/server.js",
     "verify": "yarn typecheck && yarn test && yarn build"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^8.2.0",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
